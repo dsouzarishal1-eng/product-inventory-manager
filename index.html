@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Inventory Manager</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <h1>Product Inventory Manager</h1>
+            <p>Manage your products, prices and stock easily</p>
+        </header>
+
+
+        <!-- Product Form -->
+        <div class="form">
+
+            <label for="productName">Product Name</label>
+
+            <input
+                type="text"
+                id="productName"
+                placeholder="Enter product name"
+            >
+
+
+            <label for="price">Price</label>
+
+            <input
+                type="number"
+                id="price"
+                placeholder="Enter price"
+                min="0"
+            >
+
+
+            <label for="quantity">Quantity</label>
+
+            <input
+                type="number"
+                id="quantity"
+                placeholder="Enter quantity"
+                min="1"
+            >
+
+
+            <button id="addButton">
+                Add Product
+            </button>
+
+        </div>
+
+
+        <!-- Product Section -->
+        <div class="product-section">
+
+            <div class="section-header">
+
+                <h2>Product List</h2>
+
+                <!-- Search -->
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="🔍 Search product..."
+                >
+
+            </div>
+
+
+            <!-- Product Table -->
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Action</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="productTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- Summary -->
+        <div class="summary">
+
+            <div class="summary-card">
+
+                <h3>Total Products</h3>
+
+                <p id="totalProducts">
+                    0
+                </p>
+
+            </div>
+
+
+            <div class="summary-card">
+
+                <h3>Total Inventory Value</h3>
+
+                <p>
+                    ₹<span id="totalValue">0</span>
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="dist/app.js"></script>
+
+</body>
+
+</html>
